@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+    @apply text-4xl .font-bold
+}
+
+.logo {
+    z-index:999;
+}
+
+.photo {
+    /*box-shadow: 0px 0px 5px 2px #1ae58f;*/
+    transition: 0.3s ease;
+    @apply .m-6 .bg-white
+}
+
+.photo:hover {
+    /*box-shadow: 0px 0px 8px 5px #3780c8;*/
+}
+
+@-webkit-keyframes photo {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+        box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+.photo .photo-link {
+    /*background-color: #1ae58f;*/
+    position:relative;
+}
+
+.photo .photo-link:hover .crosshair {
+    opacity: 1;
+}
+
+.photo .crosshair {
+    position:absolute;
+    color:white;
+    transition: 0.3s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index:2;
+    @apply .h-24 .w-24
+}
+
+.photo .number {
+    position:absolute;
+    bottom:10px;
+    left:25px;
+    color:white;
+    opacity:0.5;
+    @apply .text-4xl .font-bold
+}
+
+.caption {
+    @apply .text-base .text-gray-900 .italic
+}
+
+.species, .sub-species {
+    @apply .text-sm .text-gray-500
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
