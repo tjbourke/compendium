@@ -4,7 +4,7 @@
             <div class="relative w-full p-10"> <!-- bg-gray-200 -->
                 <img src="../assets/img/logo.png" class="logo absolute pl-4 top-0 right-0 md:h-64 sm:h-32">
                     <div class="photo bg-white p-6">
-                        <router-link :to="{ path: 'photos/' + photo.id }">
+                        <router-link :to="{ path: '/photos/' + photo.id }">
                             <div class="photo-link p-2">
                                 <img :src="photo.photo_url" class="photo-img">
                                 <img class="crosshair" src="../assets/img/shutter.png">

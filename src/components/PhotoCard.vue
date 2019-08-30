@@ -1,6 +1,6 @@
 <template>
     <div class="photo bg-white" :class="{'photo-current':currentPhoto.id == photo.id}">
-        <router-link :to="{ path: 'photos/' + photo.id }">
+        <router-link :to="{ path: '/photos/' + photo.id }">
             <div class="photo-link">
                 <img :src="photo.photo_url" class="photo-img">
                 <img class="crosshair" src="../assets/img/shutter.png">

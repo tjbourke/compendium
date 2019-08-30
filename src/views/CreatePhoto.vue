@@ -1,12 +1,35 @@
 <template>
     <div>
-        Name <input type="text" v-model="photo.name"><br>
-        Caption <input type="text" v-model="photo.caption"><br>
-        Description <input type="text" v-model="photo.description"><br>
-        Species <input type="text" v-model="photo.species"><br>
-        Sub Species <input type="text" v-model="photo.sub_species"><br>
-        Date Photographed <input type="date" v-model="photo.photographed_on"><br>
-        <input type="button" @click="save" value="Create">
+        <b-form @submit="save">
+            <b-container class="mt-24">
+                <h1>Add Photo to Compendium</h1>
+                <hr>
+
+                <b-row>
+                    <b-col md="4">
+                        <b-form-group label="Name">
+                            <b-form-input v-model="photo.name"></b-form-input>
+                        </b-form-group>
+                        <b-form-group label="Caption">
+                            <b-form-input v-model="photo.caption"></b-form-input>
+                        </b-form-group>
+                        <b-form-group label="Description">
+                            <b-form-input v-model="photo.description"></b-form-input>
+                        </b-form-group>
+                        <b-form-group label="Species">
+                            <b-form-input v-model="photo.species"></b-form-input>
+                        </b-form-group>
+                        <b-form-group label="Sub Species">
+                            <b-form-input v-model="photo.sub_species"></b-form-input>
+                        </b-form-group>
+                        <b-form-group label="Date Photographed">
+                            <b-form-input v-model="photo.photographed_on"></b-form-input>
+                        </b-form-group>
+                        <b-button type="button" @click="save">Add Photo</b-button>
+                    </b-col>
+                </b-row>
+            </b-container>
+        </b-form>
     </div>
 </template>
 <script>
