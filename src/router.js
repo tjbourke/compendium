@@ -19,6 +19,10 @@ export default new Router({
 			component: () => import('./views/Photos.vue')
 		},
 		{
+			path: '/photos/create',
+			component: () => import('./views/CreatePhoto.vue')
+		},
+		{
 			path: '/photos/:id',
 			component: () => import('./views/Photo.vue')
 		},

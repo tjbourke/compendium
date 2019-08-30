@@ -7,6 +7,7 @@ import './assets/css/tailwind.scss';
 Vue.config.productionTip = false;
 
 window.axios = require('axios');
+window.moment = require('moment');
 
 // Photo Card
 import PhotoCard from './components/PhotoCard.vue';

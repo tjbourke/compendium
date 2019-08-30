@@ -26,7 +26,7 @@ export default {
 	},
 	methods: {
 		loadPhotos() {
-			window.axios.get('http://capi.test/photos2')
+			window.axios.get(process.env.VUE_APP_ROOT_API + '/photos2')
 				.then((response) => {
 					this.photos = response.data.data;
 				}).catch((error) => {
