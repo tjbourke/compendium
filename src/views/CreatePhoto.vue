@@ -10,6 +10,9 @@
                         <b-form-group label="Name">
                             <b-form-input v-model="photo.name"></b-form-input>
                         </b-form-group>
+                        <b-form-group label="Photo URL">
+                            <b-form-input v-model="photo.photo_url"></b-form-input>
+                        </b-form-group>
                         <b-form-group label="Caption">
                             <b-form-input v-model="photo.caption"></b-form-input>
                         </b-form-group>
@@ -38,6 +41,7 @@ let FormattedPhoto = (photo) => {
     let formData = new FormData();
 
     formData.append('name', photo.name);
+    formData.append('photo_url', photo.photo_url);
     formData.append('caption', photo.caption);
     formData.append('description', photo.description);
     formData.append('species', photo.species);
@@ -52,6 +56,7 @@ export default {
 		return {
 			photo: {
 				name: '',
+				photo_url: '',
 				caption: '',
 				description: '',
 				species: '',
