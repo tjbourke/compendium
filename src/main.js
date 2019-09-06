@@ -14,6 +14,13 @@ Vue.use(BootstrapVue);
 window.axios = require('axios');
 window.moment = require('moment');
 
+window.axios.interceptors.request.use(function (config) {
+	config.headers.Authorization = `Bearer ${require('./token').default}`;
+	return config;
+}, function (error) {
+	return Promise.reject(error);
+});
+
 // Photo Card
 import PhotoCard from './components/PhotoCard.vue';
 import Photos from './views/Photos.vue';
